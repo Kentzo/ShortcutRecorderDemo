@@ -20,31 +20,16 @@
 - (BOOL)shortcutRecorder:(SRRecorderControl *)aRecorder canRecordShortcut:(NSDictionary *)aShortcut
 {
     __autoreleasing NSError *error = nil;
-    BOOL isTaken = NO;
-    
-    if ((aRecorder != self.pingShortcutRecorder && SRShortcutEqualToShortcut(aShortcut, self.pingShortcutRecorder.objectValue)) ||
-        (aRecorder != self.globalPingShortcutRecorder && SRShortcutEqualToShortcut(aShortcut, self.globalPingShortcutRecorder.objectValue)))
-    {
-        isTaken = YES;
-        NSDictionary *userInfo = @{
-            NSLocalizedFailureReasonErrorKey: SRLoc(@"The key combination %@ can't be used!"),
-            NSLocalizedDescriptionKey: SRLoc(@"The key combination \"%@\" can't be used because it's already used by other shortcut.")
-        };
-        error = [NSError errorWithDomain:[[NSBundle mainBundle] bundleIdentifier]
-                                    code:0
-                                userInfo:userInfo];
-    }
-    else
-    {
-        isTaken = [_validator isKeyCode:[aShortcut[SRShortcutKeyCode] unsignedShortValue]
-                          andFlagsTaken:[aShortcut[SRShortcutModifierFlagsKey] unsignedIntegerValue]
-                                  error:&error];
-    }
+    BOOL isTaken = [_validator isKeyCode:[aShortcut[SRShortcutKeyCode] unsignedShortValue] andFlagsTaken:[aShortcut[SRShortcutModifierFlagsKey] unsignedIntegerValue] error:&error];
 
     if (isTaken)
     {
         NSBeep();
-        [NSApp presentError:error];
+        [self presentError:error
+            modalForWindow:self.window
+                  delegate:nil
+        didPresentSelector:NULL
+               contextInfo:NULL];
     }
 
     return !isTaken;
@@ -63,6 +48,27 @@
 
 
 #pragma mark SRValidatorDelegate
+
+- (BOOL)shortcutValidator:(SRValidator *)aValidator isKeyCode:(unsigned short)aKeyCode andFlagsTaken:(NSUInteger)aFlags reason:(NSString **)outReason
+{
+#define IS_TAKEN(aRecorder) (recorder != (aRecorder) && SRShortcutEqualToShortcut(shortcut, [(aRecorder) objectValue]))
+    SRRecorderControl *recorder = (SRRecorderControl *)self.window.firstResponder;
+
+    if (![recorder isKindOfClass:[SRRecorderControl class]])
+        return NO;
+
+    NSDictionary *shortcut = SRShortcutWithCocoaModifierFlagsAndKeyCode(aFlags, aKeyCode);
+
+    if (IS_TAKEN(_pingShortcutRecorder) ||
+        IS_TAKEN(_globalPingShortcutRecorder))
+    {
+        *outReason = @"it's already used. To use this shortcut, first remove or change the other shortcut";
+        return YES;
+    }
+    else
+        return NO;
+#undef IS_TAKEN
+}
 
 - (BOOL)shortcutValidatorShouldUseASCIIStringForKeyCodes:(SRValidator *)aValidator
 {
