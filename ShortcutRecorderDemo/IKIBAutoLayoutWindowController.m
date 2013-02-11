@@ -23,10 +23,17 @@
                            toObject:defaults
                         withKeyPath:@"values.ping"
                             options:nil];
+    [self.pingShortcutRecorder setAllowedModifierFlags:NSShiftKeyMask | NSAlternateKeyMask | NSCommandKeyMask
+                                 requiredModifierFlags:0
+                              allowsEmptyModifierFlags:NO];
     [self.globalPingShortcutRecorder bind:NSValueBinding
                                  toObject:defaults
                               withKeyPath:@"values.globalPing"
                                   options:nil];
+    [self.pingItemShortcutRecorder bind:NSValueBinding
+                               toObject:defaults
+                            withKeyPath:@"values.pingItem"
+                                options:nil];
 }
 
 @end

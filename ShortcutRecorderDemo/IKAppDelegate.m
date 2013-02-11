@@ -86,7 +86,16 @@
                  toObject:defaults
               withKeyPath:@"values.ping"
                   options:@{NSValueTransformerBindingOption: [SRKeyEquivalentModifierMaskTransformer new]}];
-    
+
+    [self.pingItem bind:@"keyEquivalent"
+               toObject:defaults
+            withKeyPath:@"values.pingItem"
+                options:@{NSValueTransformerBindingOption: [SRKeyEquivalentTransformer new]}];
+    [self.pingItem bind:@"keyEquivalentModifierMask"
+               toObject:defaults
+            withKeyPath:@"values.pingItem"
+                options:@{NSValueTransformerBindingOption: [SRKeyEquivalentModifierMaskTransformer new]}];
+
     [defaults addObserver:self forKeyPath:@"values.globalPing" options:NSKeyValueObservingOptionInitial context:NULL];
 }
 

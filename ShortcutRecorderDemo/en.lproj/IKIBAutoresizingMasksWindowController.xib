@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1080</int>
 		<string key="IBDocument.SystemVersion">12C60</string>
-		<string key="IBDocument.InterfaceBuilderVersion">2844</string>
+		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
 		<string key="IBDocument.AppKitVersion">1187.34</string>
 		<string key="IBDocument.HIToolboxVersion">625.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">2844</string>
+			<string key="NS.object.0">3084</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>NSCustomObject</string>
@@ -38,14 +38,14 @@
 			<object class="NSWindowTemplate" id="80070142">
 				<int key="NSWindowStyleMask">27</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{196, 112}, {327, 98}}</string>
+				<string key="NSWindowRect">{{196, 112}, {327, 131}}</string>
 				<int key="NSWTFlags">-1535638528</int>
 				<string key="NSWindowTitle">Interface Builder Autoresizing Masks Demo</string>
 				<string key="NSWindowClass">NSPanel</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
-				<string key="NSWindowContentMaxSize">{600, 98}</string>
-				<string key="NSWindowContentMinSize">{200, 98}</string>
+				<string key="NSWindowContentMaxSize">{600, 131}</string>
+				<string key="NSWindowContentMinSize">{200, 131}</string>
 				<object class="NSView" key="NSWindowView" id="45375859">
 					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
@@ -53,7 +53,7 @@
 						<object class="NSCustomView" id="162563404">
 							<reference key="NSNextResponder" ref="45375859"/>
 							<int key="NSvFlags">266</int>
-							<string key="NSFrame">{{105, 53}, {202, 25}}</string>
+							<string key="NSFrame">{{105, 86}, {202, 25}}</string>
 							<reference key="NSSuperview" ref="45375859"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="932723322"/>
@@ -63,17 +63,17 @@
 						<object class="NSCustomView" id="188754340">
 							<reference key="NSNextResponder" ref="45375859"/>
 							<int key="NSvFlags">266</int>
-							<string key="NSFrame">{{105, 20}, {202, 25}}</string>
+							<string key="NSFrame">{{105, 53}, {202, 25}}</string>
 							<reference key="NSSuperview" ref="45375859"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
+							<reference key="NSNextKeyView" ref="622910158"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<string key="NSClassName">SRRecorderControl</string>
 						</object>
 						<object class="NSTextField" id="292773233">
 							<reference key="NSNextResponder" ref="45375859"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{43, 58}, {57, 17}}</string>
+							<string key="NSFrame">{{19, 91}, {81, 17}}</string>
 							<reference key="NSSuperview" ref="45375859"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="162563404"/>
@@ -82,7 +82,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="779379804">
 								<int key="NSCellFlags">68157504</int>
 								<int key="NSCellFlags2">71304192</int>
-								<string key="NSContents">Ping:</string>
+								<string key="NSContents">Ping Button:</string>
 								<object class="NSFont" key="NSSupport" id="280059051">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">13</double>
@@ -114,7 +114,7 @@
 						<object class="NSTextField" id="932723322">
 							<reference key="NSNextResponder" ref="45375859"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{17, 25}, {83, 17}}</string>
+							<string key="NSFrame">{{17, 58}, {83, 17}}</string>
 							<reference key="NSSuperview" ref="45375859"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="188754340"/>
@@ -132,8 +132,39 @@
 							</object>
 							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 						</object>
+						<object class="NSTextField" id="622910158">
+							<reference key="NSNextResponder" ref="45375859"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{32, 25}, {68, 17}}</string>
+							<reference key="NSSuperview" ref="45375859"/>
+							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView" ref="494005960"/>
+							<string key="NSReuseIdentifierKey">_NS:1535</string>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSTextFieldCell" key="NSCell" id="708003864">
+								<int key="NSCellFlags">68157504</int>
+								<int key="NSCellFlags2">272630784</int>
+								<string key="NSContents">Ping Item:</string>
+								<reference key="NSSupport" ref="280059051"/>
+								<string key="NSCellIdentifier">_NS:1535</string>
+								<reference key="NSControlView" ref="622910158"/>
+								<reference key="NSBackgroundColor" ref="394644910"/>
+								<reference key="NSTextColor" ref="445556250"/>
+							</object>
+							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
+						</object>
+						<object class="NSCustomView" id="494005960">
+							<reference key="NSNextResponder" ref="45375859"/>
+							<int key="NSvFlags">266</int>
+							<string key="NSFrame">{{105, 20}, {202, 25}}</string>
+							<reference key="NSSuperview" ref="45375859"/>
+							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
+							<string key="NSReuseIdentifierKey">_NS:9</string>
+							<string key="NSClassName">SRRecorderControl</string>
+						</object>
 					</array>
-					<string key="NSFrameSize">{327, 98}</string>
+					<string key="NSFrameSize">{327, 131}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="292773233"/>
@@ -151,9 +182,9 @@
 					</array>
 					<string key="NSReuseIdentifierKey">_NS:21</string>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1920, 1058}}</string>
-				<string key="NSMinSize">{200, 114}</string>
-				<string key="NSMaxSize">{600, 114}</string>
+				<string key="NSScreenRect">{{0, 0}, {1366, 746}}</string>
+				<string key="NSMinSize">{200, 147}</string>
+				<string key="NSMaxSize">{600, 147}</string>
 				<string key="NSFrameAutosaveName">Interface Builder Autoresizing Masks Demo</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
@@ -183,6 +214,14 @@
 						<reference key="destination" ref="80070142"/>
 					</object>
 					<int key="connectionID">33</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">pingItemShortcutRecorder</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="494005960"/>
+					</object>
+					<int key="connectionID">42</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBAccessibilityConnection" key="connection">
@@ -215,6 +254,22 @@
 						<reference key="destination" ref="1001"/>
 					</object>
 					<int key="connectionID">36</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="494005960"/>
+						<reference key="destination" ref="1001"/>
+					</object>
+					<int key="connectionID">41</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBAccessibilityConnection" key="connection">
+						<string key="label">title</string>
+						<reference key="source" ref="494005960"/>
+						<reference key="destination" ref="622910158"/>
+					</object>
+					<int key="connectionID">43</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -259,6 +314,8 @@
 							<reference ref="932723322"/>
 							<reference ref="188754340"/>
 							<reference ref="162563404"/>
+							<reference ref="494005960"/>
+							<reference ref="622910158"/>
 						</array>
 						<reference key="parent" ref="80070142"/>
 					</object>
@@ -300,6 +357,24 @@
 						<reference key="object" ref="779379804"/>
 						<reference key="parent" ref="292773233"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">38</int>
+						<reference key="object" ref="622910158"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="708003864"/>
+						</array>
+						<reference key="parent" ref="45375859"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">39</int>
+						<reference key="object" ref="708003864"/>
+						<reference key="parent" ref="622910158"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">40</int>
+						<reference key="object" ref="494005960"/>
+						<reference key="parent" ref="45375859"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -311,6 +386,9 @@
 				<string key="12.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="27.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="29.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="38.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="39.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="40.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="YES" key="7.NSWindowTemplate.visibleAtLaunch"/>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -320,7 +398,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">37</int>
+			<int key="maxID">43</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -329,11 +407,16 @@
 					<string key="superclassName">NSWindowController</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="globalPingShortcutRecorder">SRRecorderControl</string>
+						<string key="pingItemShortcutRecorder">SRRecorderControl</string>
 						<string key="pingShortcutRecorder">SRRecorderControl</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="globalPingShortcutRecorder">
 							<string key="name">globalPingShortcutRecorder</string>
+							<string key="candidateClassName">SRRecorderControl</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="pingItemShortcutRecorder">
+							<string key="name">pingItemShortcutRecorder</string>
 							<string key="candidateClassName">SRRecorderControl</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="pingShortcutRecorder">

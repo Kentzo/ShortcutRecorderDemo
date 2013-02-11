@@ -16,6 +16,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults removeObserver:self forKeyPath:@"ping"];
     [defaults removeObserver:self forKeyPath:@"globalPing"];
+    [defaults removeObserver:self forKeyPath:@"pingItem"];
 }
 
 
@@ -27,6 +28,8 @@
         [[NSUserDefaults standardUserDefaults] setValue:aRecorder.objectValue forKey:@"ping"];
     else if (aRecorder == self.globalPingShortcutRecorder)
         [[NSUserDefaults standardUserDefaults] setValue:aRecorder.objectValue forKey:@"globalPing"];
+    else if (aRecorder == self.pingItemShortcutRecorder)
+        [[NSUserDefaults standardUserDefaults] setValue:aRecorder.objectValue forKey:@"pingItem"];
 }
 
 
@@ -36,9 +39,14 @@
 {
     [super awakeFromNib];
 
+    [self.pingShortcutRecorder setAllowedModifierFlags:NSShiftKeyMask | NSAlternateKeyMask | NSCommandKeyMask
+                                 requiredModifierFlags:0
+                              allowsEmptyModifierFlags:NO];
+
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults addObserver:self forKeyPath:@"ping" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial context:NULL];
     [defaults addObserver:self forKeyPath:@"globalPing" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial context:NULL];
+    [defaults addObserver:self forKeyPath:@"pingItem" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial context:NULL];
 }
 
 - (void)observeValueForKeyPath:(NSString *)aKeyPath ofObject:(id)anObject change:(NSDictionary *)aChange context:(void *)aContext
@@ -47,6 +55,8 @@
         self.pingShortcutRecorder.objectValue = aChange[NSKeyValueChangeNewKey];
     else if ([aKeyPath isEqualToString:@"globalPing"])
         self.globalPingShortcutRecorder.objectValue = aChange[NSKeyValueChangeNewKey];
+    else if ([aKeyPath isEqualToString:@"pingItem"])
+        self.pingItemShortcutRecorder.objectValue = aChange[NSKeyValueChangeNewKey];
     else
         [super observeValueForKeyPath:aKeyPath ofObject:anObject change:aChange context:aContext];
 }

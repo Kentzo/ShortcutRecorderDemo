@@ -15,6 +15,8 @@
 
 @property (assign) IBOutlet NSButton *pingButton;
 
+@property (assign) IBOutlet NSMenuItem *pingItem;
+
 - (IBAction)showIBAutoLayout:(id)aSender;
 
 - (IBAction)showCodeAutoLayout:(id)aSender;

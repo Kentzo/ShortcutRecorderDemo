@@ -60,7 +60,8 @@
     NSDictionary *shortcut = SRShortcutWithCocoaModifierFlagsAndKeyCode(aFlags, aKeyCode);
 
     if (IS_TAKEN(_pingShortcutRecorder) ||
-        IS_TAKEN(_globalPingShortcutRecorder))
+        IS_TAKEN(_globalPingShortcutRecorder) ||
+        IS_TAKEN(_pingItemShortcutRecorder))
     {
         *outReason = @"it's already used. To use this shortcut, first remove or change the other shortcut";
         return YES;
@@ -70,7 +71,7 @@
 #undef IS_TAKEN
 }
 
-- (BOOL)shortcutValidatorShouldUseASCIIStringForKeyCodes:(SRValidator *)aValidator
+- (BOOL)shortcutValidatorShouldCheckMenu:(SRValidator *)aValidator
 {
     return YES;
 }

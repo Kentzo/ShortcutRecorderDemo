@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E256674F16C908E100B84747 /* IKIBAutoresizingMasksWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E256675116C908E100B84747 /* IKIBAutoresizingMasksWindowController.xib */; };
 		E2BE91C516A8B88500827E8C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BE91C416A8B88500827E8C /* Cocoa.framework */; };
 		E2BE91CF16A8B88500827E8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2BE91CD16A8B88500827E8C /* InfoPlist.strings */; };
 		E2BE91D116A8B88500827E8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BE91D016A8B88500827E8C /* main.m */; };
@@ -21,7 +22,6 @@
 		E2BE91F716A8BD5E00827E8C /* IKIBAutoLayoutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2BE91F916A8BD5E00827E8C /* IKIBAutoLayoutWindowController.xib */; };
 		E2BE920416A8C42400827E8C /* IKDemoWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BE920316A8C42300827E8C /* IKDemoWindowController.m */; };
 		E2BE928216AC537300827E8C /* IKIBAutoresizingMasksWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BE928016AC537300827E8C /* IKIBAutoresizingMasksWindowController.m */; };
-		E2BE928316AC537300827E8C /* IKIBAutoresizingMasksWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2BE928116AC537300827E8C /* IKIBAutoresizingMasksWindowController.xib */; };
 		E2BE928716AC5BF800827E8C /* IKCodeAutoLayoutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BE928616AC5BF800827E8C /* IKCodeAutoLayoutWindowController.m */; };
 		E2BE929616AC6EE400827E8C /* IKCodeAutoLayoutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2BE929416AC6EE300827E8C /* IKCodeAutoLayoutWindowController.xib */; };
 /* End PBXBuildFile section */
@@ -59,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E256675016C908E100B84747 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/IKIBAutoresizingMasksWindowController.xib; sourceTree = "<group>"; };
 		E2BE91C016A8B88500827E8C /* ShortcutRecorderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShortcutRecorderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BE91C416A8B88500827E8C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E2BE91C716A8B88500827E8C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -80,7 +81,6 @@
 		E2BE920316A8C42300827E8C /* IKDemoWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKDemoWindowController.m; sourceTree = "<group>"; };
 		E2BE927F16AC537300827E8C /* IKIBAutoresizingMasksWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKIBAutoresizingMasksWindowController.h; sourceTree = "<group>"; };
 		E2BE928016AC537300827E8C /* IKIBAutoresizingMasksWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKIBAutoresizingMasksWindowController.m; sourceTree = "<group>"; };
-		E2BE928116AC537300827E8C /* IKIBAutoresizingMasksWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IKIBAutoresizingMasksWindowController.xib; sourceTree = "<group>"; };
 		E2BE928516AC5BF800827E8C /* IKCodeAutoLayoutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKCodeAutoLayoutWindowController.h; sourceTree = "<group>"; };
 		E2BE928616AC5BF800827E8C /* IKCodeAutoLayoutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKCodeAutoLayoutWindowController.m; sourceTree = "<group>"; };
 		E2BE929516AC6EE400827E8C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IKCodeAutoLayoutWindowController.xib; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 			children = (
 				E2BE927F16AC537300827E8C /* IKIBAutoresizingMasksWindowController.h */,
 				E2BE928016AC537300827E8C /* IKIBAutoresizingMasksWindowController.m */,
-				E2BE928116AC537300827E8C /* IKIBAutoresizingMasksWindowController.xib */,
+				E256675116C908E100B84747 /* IKIBAutoresizingMasksWindowController.xib */,
 			);
 			name = "Interface Builder Autoresizing Masks Demo";
 			sourceTree = "<group>";
@@ -284,7 +284,7 @@
 				E2BE91D516A8B88500827E8C /* Credits.rtf in Resources */,
 				E2BE91DB16A8B88500827E8C /* MainMenu.xib in Resources */,
 				E2BE91F716A8BD5E00827E8C /* IKIBAutoLayoutWindowController.xib in Resources */,
-				E2BE928316AC537300827E8C /* IKIBAutoresizingMasksWindowController.xib in Resources */,
+				E256674F16C908E100B84747 /* IKIBAutoresizingMasksWindowController.xib in Resources */,
 				E2BE929616AC6EE400827E8C /* IKCodeAutoLayoutWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +308,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		E256675116C908E100B84747 /* IKIBAutoresizingMasksWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E256675016C908E100B84747 /* en */,
+			);
+			name = IKIBAutoresizingMasksWindowController.xib;
+			sourceTree = "<group>";
+		};
 		E2BE91CD16A8B88500827E8C /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

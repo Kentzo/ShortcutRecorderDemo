@@ -16,4 +16,6 @@
 
 @property (weak) IBOutlet SRRecorderControl *globalPingShortcutRecorder;
 
+@property (weak) IBOutlet SRRecorderControl *pingItemShortcutRecorder;
+
 @end
