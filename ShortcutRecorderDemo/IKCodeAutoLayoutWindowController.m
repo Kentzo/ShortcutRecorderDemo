@@ -19,6 +19,7 @@
     
     SRRecorderControl *pingShortcutRecorder = [[SRRecorderControl alloc] initWithFrame:NSZeroRect];
     pingShortcutRecorder.delegate = self;
+    pingShortcutRecorder.enabled = NO;
     [pingShortcutRecorder setAllowedModifierFlags:NSShiftKeyMask | NSAlternateKeyMask | NSCommandKeyMask
                             requiredModifierFlags:0
                          allowsEmptyModifierFlags:NO];
@@ -93,6 +94,10 @@
     [self.pingShortcutRecorder bind:NSValueBinding
                            toObject:defaults
                         withKeyPath:@"values.ping"
+                            options:nil];
+    [self.pingShortcutRecorder bind:NSEnabledBinding
+                           toObject:defaults
+                        withKeyPath:@"values.isPingItemEnabled"
                             options:nil];
     self.globalPingShortcutRecorder = globalPingShortcutRecorder;
     [self.globalPingShortcutRecorder bind:NSValueBinding

@@ -23,6 +23,10 @@
                            toObject:defaults
                         withKeyPath:@"values.ping"
                             options:nil];
+    [self.pingShortcutRecorder bind:NSEnabledBinding
+                           toObject:defaults
+                        withKeyPath:@"values.isPingItemEnabled"
+                            options:nil];
     [self.pingShortcutRecorder setAllowedModifierFlags:NSShiftKeyMask | NSAlternateKeyMask | NSCommandKeyMask
                                  requiredModifierFlags:0
                               allowsEmptyModifierFlags:NO];

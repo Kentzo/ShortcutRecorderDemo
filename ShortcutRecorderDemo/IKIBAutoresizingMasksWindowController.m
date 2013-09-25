@@ -47,6 +47,7 @@
     [defaults addObserver:self forKeyPath:@"ping" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial context:NULL];
     [defaults addObserver:self forKeyPath:@"globalPing" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial context:NULL];
     [defaults addObserver:self forKeyPath:@"pingItem" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial context:NULL];
+    [defaults addObserver:self forKeyPath:@"isPingItemEnabled" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial context:NULL];
 }
 
 - (void)observeValueForKeyPath:(NSString *)aKeyPath ofObject:(id)anObject change:(NSDictionary *)aChange context:(void *)aContext
@@ -57,6 +58,8 @@
         self.globalPingShortcutRecorder.objectValue = aChange[NSKeyValueChangeNewKey];
     else if ([aKeyPath isEqualToString:@"pingItem"])
         self.pingItemShortcutRecorder.objectValue = aChange[NSKeyValueChangeNewKey];
+    else if ([aKeyPath isEqualToString:@"isPingItemEnabled"])
+        self.pingShortcutRecorder.enabled = ((id)aChange[NSKeyValueChangeNewKey] != [NSNull null]) && [aChange[NSKeyValueChangeNewKey] boolValue];
     else
         [super observeValueForKeyPath:aKeyPath ofObject:anObject change:aChange context:aContext];
 }
